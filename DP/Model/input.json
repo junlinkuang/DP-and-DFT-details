@@ -1,0 +1,66 @@
+{
+    "_comment": " PSO",
+    "model": {
+	"type_map":	["Pb", "Sn" ,"O"],
+	"descriptor" :{
+	    "type":		"se_e2_a",
+	    "sel":		[640,640,640],
+	    "rcut_smth":	2,
+	    "rcut":		9.0,
+	    "neuron":		[25, 50, 100],
+	    "resnet_dt":	false,
+	    "axis_neuron":	12,
+	    "seed":		1,
+	    "_comment":		" that's all"
+	},
+	"fitting_net" : {
+	    "neuron":		[240, 240, 240],
+	    "resnet_dt":	true,
+	    "seed":		1,
+	    "_comment":		" that's all"
+	},
+	"_comment":	" that's all"
+    },
+
+    "learning_rate" :{
+	"type":		"exp",
+	"decay_steps":	5000,
+	"start_lr":	0.001,	
+	"stop_lr":	5e-8,
+	"_comment":	"that's all"
+    },
+
+    "loss" :{
+	"type":		"ener",
+	"start_pref_e":	0.02,
+	"limit_pref_e":	2,
+	"start_pref_f":	1000,
+	"limit_pref_f":	1,
+	"start_pref_v":	0,
+	"limit_pref_v":	0,
+	"_comment":	" that's all"
+    },
+
+    "training" : {
+	"training_data": {
+	    "systems":		["../data/data-6.0/interp-01","../data/data-6.0/temp-01","../data/data-6.0/temp-02","../data/data-6.0/temp-03"],
+	    "batch_size":	"auto",
+	    "_comment":		"that's all"
+	},
+	"validation_data":{
+            "systems":          ["../data/dp-temp-val/Pb6Sn6O18","../data/dp-temp-val/Pb8Sn8O24","../data/dp-temp-val/Pb16Sn16O48"],
+	    "batch_size":	"auto",
+	    "numb_btch":	1,
+	    "_comment":		"that's all"
+	},
+	"stop_batch":	5000000,
+	"seed":		10,
+	"disp_file":	"lcurve.out",
+	"disp_freq":	1000,
+	"save_freq":	1000,
+	"_comment":	"that's all"
+    },    
+
+    "_comment":		"that's all"
+}
+
