@@ -1,0 +1,38 @@
+variable        NSTEPS          equal 40000
+variable        THERMO_FREQ     equal 10
+variable        DUMP_FREQ       equal 10
+variable        TEMP            equal value
+variable        PRES            equal 0.000000
+variable        TAU_T           equal 0.100000
+variable        TAU_P           equal 0.500000
+
+units           metal
+boundary        p p p
+atom_style      atomic
+
+neighbor        1.0 bin
+neigh_modify delay 5
+neigh_modify one 5000
+
+read_data conf.lmp
+#change_box   all triclinic
+mass 1 207.2
+mass 2 118.7
+mass 3  15.9999
+
+pair_style      deepmd /home/bingxing2/home/scx8q21/dp-example/lammps/6.0/graph-compress.pb
+pair_coeff      * *
+
+thermo_style    custom step temp pe ke etotal press vol lx ly lz xy xz yz
+thermo          ${THERMO_FREQ}
+
+dump		2 all custom 100 traj.lammpstrj id type x y z 
+dump_modify 2 sort id
+restart         10000 dpgen.restart
+
+velocity        all create ${TEMP} 443428
+#fix             1 all nvt temp ${TEMP} ${TEMP} ${TAU_T}
+fix             1 all npt temp ${TEMP} ${TEMP} ${TAU_T} aniso ${PRES} ${PRES} ${TAU_P}
+
+timestep        0.002000
+run             ${NSTEPS} upto

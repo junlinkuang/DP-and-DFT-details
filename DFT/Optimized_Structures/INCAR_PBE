@@ -1,0 +1,53 @@
+YSTEM  = PbSnO3
+ENCUT   = 500        ! in eV
+
+ISTART  = 0
+ICHARG  = 2
+LWAVE = .FALSE.
+LCHARG = .FALSE.
+NPAR    = 4
+#NCORE    = 3
+#KPAR = 48
+PREC    = Accurate
+
+ISYM    = 2
+
+NSW     = 300
+IBRION  = 2           ! 0 - MD
+#POTIM   = 0.1
+ISIF    = 3           ! relax ions + calculate stress tensor
+EDIFF   = 1E-8
+EDIFFG  =-0.0005       ! forces criteria - 1 meV/Ang
+NELM    = 100
+NELMIN  = 4
+
+LREAL = AUTO
+#ALGO  = Fast
+
+
+################################################################
+
+# General/output settings:
+#LORBIT  = 11         ! write magnetic moments in OUTCAR
+ISMEAR  = -5          ! 0 - gauss ; 1 - MP ;  -5 - tetrahedron
+#SIGMA   = 0.05       !0.1        ! in eV
+GGA     = PE
+#VOSKOWN = 1
+
+#NGX=46
+#NGY=46
+#NGZ=84
+
+#LMAXMIX = 6
+
+#ADDGRID = .TRUE.
+#LASPH   = .TRUE.
+
+#AMIX      =  0.2  
+#BMIX      =  0.0001     ! almost zero, but 0 will crash some versions  
+#AMIX_MAG  =  0.8  
+#BMIX_MAG  =  0.0001     ! almost zero, but 0 will crash some versions  
+
+#GGA_COMPAT=.FALSE.
+KSPACING = 0.2
+KGAMMA = .TRUE.
