@@ -77,7 +77,7 @@ This folder contains the LAMMPS input and MD simulation data for different phase
 **File description:**
 - input.lammps: The main LAMMPS input script.
 - Phase subfolders: Each contains the MD simulation outputs for different AFD (antiferrodistortive) and displacement (disp) configurations.
-  
+- lattice subfolder: Subfolder containing the lattice-related simulation data.
 **Note:**
 The Cubic phase was cooled down, whereas Pbam, Pnma20, and R3c were heated up from 0 K.
 
@@ -86,9 +86,6 @@ The Cubic phase was cooled down, whereas Pbam, Pnma20, and R3c were heated up fr
 - Column 2 : x component of <quantity>
 - Column 3 : y component of <quantity>
 - Column 4 : z component of <quantity>
-
-**Subfolders:**
-- lattice: Subfolder containing the lattice-related simulation data.
   
 **Format of the lattice files:**
 - Column 1 : temperature (K)
