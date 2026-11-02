@@ -18,8 +18,8 @@ This folder contains the phonon calculation results for five low-energy structur
 - phonon_band_DP.txt   : phonon dispersion from the trained DP model
   
 **Format:**
-  Column 1 : cumulative distance along the k-path
-  Column 2 : phonon frequency (THz)
+- Column 1 : cumulative distance along the k-path
+- Column 2 : phonon frequency (THz)
 
 ## 3. BECs
 This folder contains the Born effective charges (BECs) calculated for the structures/conditions listed below.
@@ -82,17 +82,18 @@ This folder contains the LAMMPS input and MD simulation data for different phase
 The Cubic phase was cooled down, whereas Pbam, Pnma20, and R3c were heated up from 0 K.
 
 **Format of the MD output files:**
-  Column 1 : temperature (K)
-  Column 2 : x component of <quantity>
-  Column 3 : y component of <quantity>
-  Column 4 : z component of <quantity>
+- Column 1 : temperature (K)
+- Column 2 : x component of <quantity>
+- Column 3 : y component of <quantity>
+- Column 4 : z component of <quantity>
 
+**Subfolders:**
 - lattice: Subfolder containing the lattice-related simulation data.
   
 **Format of the lattice files:**
-  Column 1 : temperature (K)
-  Column 2 : lattice direction (a, b, c), corresponding to x, y, z
-  Column 3 : lattice constant (Å)
+- Column 1 : temperature (K)
+- Column 2 : lattice direction (a, b, c), corresponding to x, y, z
+- Column 3 : lattice constant (Å)
 
 ## 6. Electric_Field
 This folder contains the polarization results under applied electric fields at different temperatures for the cubic phase.
