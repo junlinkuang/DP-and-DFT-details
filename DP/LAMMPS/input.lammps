@@ -32,7 +32,7 @@ restart         10000 dpgen.restart
 
 velocity        all create ${TEMP} 443428
 #fix             1 all nvt temp ${TEMP} ${TEMP} ${TAU_T}
-fix             1 all npt temp ${TEMP} ${TEMP} ${TAU_T} aniso ${PRES} ${PRES} ${TAU_P}
+fix             1 all npt temp ${TEMP} ${TEMP} ${TAU_T} tri ${PRES} ${PRES} ${TAU_P}
 
 timestep        0.002000
 run             ${NSTEPS} upto
