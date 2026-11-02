@@ -16,6 +16,7 @@ This folder contains the phonon calculation results for five low-energy structur
 **File description:**
 - phonon_band_DFT.txt : phonon dispersion from DFT (phonopy)
 - phonon_band_DP.txt   : phonon dispersion from the trained DP model
+  
 **Format:**
   Column 1 : cumulative distance along the k-path
   Column 2 : phonon frequency (THz)
