@@ -83,9 +83,9 @@ The Cubic phase was cooled down, whereas Pbam, Pnma20, and R3c were heated up fr
 
 **Format of the MD output files:**
 - Column 1 : temperature (K)
-- Column 2 : x component of <quantity>
-- Column 3 : y component of <quantity>
-- Column 4 : z component of <quantity>
+- Column 2 : x component of '<quantity>'
+- Column 3 : y component of '<quantity>'
+- Column 4 : z component of '<quantity>'
   
 **Format of the lattice files:**
 - Column 1 : temperature (K)
