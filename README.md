@@ -8,7 +8,7 @@ This folder contains the 24 optimized structures obtained from PBEsol calculatio
 
 **File description:**
 - Optimized structure files (PBEsol-relaxed configurations)
-- INCAR and POTCAR files for four different pseudopotentials used in the calculations
+- INCAR files for four different pseudopotentials used in the calculations
 
 ## 2. Phonon
 This folder contains the phonon calculation results for five low-energy structures.
