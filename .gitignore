@@ -1,1 +1,5 @@
 .DS_Store
+POTCAR
+POTCAR.*
+**/POTCAR
+**/POTCAR.*
